@@ -255,6 +255,8 @@ button:focus,
 
 /* Slideshow container */
 .slideshow-container {
+  display: flex;
+  align-items: center;
   position: relative;
   margin: 25px 0 80px;
 }
@@ -266,6 +268,7 @@ button:focus,
   justify-content: space-between;
   flex-wrap: nowrap;
   overflow: hidden;
+  width: 100%;
 }
 
 .slideshow-container .slides img {
@@ -278,10 +281,10 @@ button:focus,
 .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  /* top: 50%; */
   width: auto;
   padding: 16px;
-  margin-top: -22px;
+  /* margin-top: -22px; */
   color: #d1d1d1 !important;
   font-weight: bold;
   font-size: 18px;

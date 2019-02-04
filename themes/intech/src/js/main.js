@@ -67,6 +67,7 @@ let prodList = document.getElementById('list-products');
 // let media = document.querySelectorAll('.media');
 
 addToCart();
+
 function addToCart() {
   for (let i = 0; i < prodList.children.length; i++) {
     let mediaElement = prodList.children[i];
@@ -74,7 +75,7 @@ function addToCart() {
     mediaElement.addEventListener('click', () => {
       count++;
       if (count >= 2) {
-        alert('You already selected this product');
+        alert('You already selected this product! Please choose another one.');
         return;
       }
       mediaElement.children[2].checked = true;
