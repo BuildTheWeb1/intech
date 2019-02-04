@@ -8,12 +8,13 @@ dropdown.addEventListener('click', e => {
 
 // Update the box header based on selected category
 let prodCat = document.querySelectorAll('.prod-cat');
+let prodTitle = document.querySelector('.product-title');
 
 function updateTitle() {
   for (let i = 0; i < prodCat.length; i++) {
     let prodTitle = document.querySelector('.product-title');
     prodCat[i].addEventListener('click', () => {
-      prodTitle.innerHTML = prodCat[i].textContent;
+      prodTitle.textContent = prodCat[i].textContent;
     });
   }
 }
@@ -58,35 +59,38 @@ function filterRemoveClass(element, name) {
   element.className = arr1.join(' ');
 }
 
-// Limit selection from each category
-
-
 // Add selected products to the cart module
 const btnSubmit = document.getElementById('submit-btn');
 const clearBtn = document.querySelector('.btn-primary');
 let modal = document.querySelector('.modal-body');
 let prodList = document.getElementById('list-products');
-let media = document.querySelectorAll('.media');
+// let media = document.querySelectorAll('.media');
 
-console.log(media[0]);
-console.log(media[1]);
-
-
-for (let i = 0; i < prodList.children.length; i++) {
-  let mediaElement = prodList.children[i];
-  mediaElement.addEventListener('click', () => {
-    mediaElement.children[2].checked = true;
-    modal.innerHTML += `
-    <div class="prod-item d-flex align-items-center px-3">
-    <img src="${mediaElement.children[0].src}" class="mr-3">
-    <p class="mb-0">${mediaElement.children[1].innerText}</p>
-    </div>
-    `;
-  });
-  clearBtn.addEventListener('click', () => {
-    modal.innerHTML = '';
-    mediaElement.children[2].checked = false;
-  });
+addToCart();
+function addToCart() {
+  for (let i = 0; i < prodList.children.length; i++) {
+    let mediaElement = prodList.children[i];
+    let count = 0;
+    mediaElement.addEventListener('click', () => {
+      count++;
+      if (count >= 2) {
+        alert('You already selected this product');
+        return;
+      }
+      mediaElement.children[2].checked = true;
+      modal.innerHTML += `
+      <div class="prod-item d-flex align-items-center px-3">
+      <img src="${mediaElement.children[0].src}" class="mr-3">
+      <p class="mb-0">${mediaElement.children[1].textContent}</p>
+      </div>
+      `;
+    });
+    clearBtn.addEventListener('click', () => {
+      modal.innerHTML = '';
+      mediaElement.children[2].checked = false;
+      count = 0;
+    });
+  }
 }
 
 btnSubmit.addEventListener('click', () => {

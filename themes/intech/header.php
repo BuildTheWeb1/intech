@@ -133,8 +133,7 @@
                 </p>
                 <a href="#" class="dropdown" id="category-dropdown"></a>
               </div>
-              <div class="card-body position-relative" id="list-products">
-                <div class="card-dropdown no-show">
+              <div class="card-dropdown no-show">
                   <div class="container">
                     <div class="row">
                       <?php 
@@ -150,6 +149,7 @@
                     </div>
                   </div>
                 </div>
+              <div class="card-body position-relative" id="list-products">
                 <?php
                   $homeProducts = new WP_Query(array(
                     'posts_per_page' => 10,
