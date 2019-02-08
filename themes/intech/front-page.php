@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-<!-- Slider -->
-<div class="container-fluid">
+ <!-- Slider -->
+ <div class="container-fluid">
       <div class="container">
         <div class="slideshow-container">
           <div class="slides">

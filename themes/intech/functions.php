@@ -19,10 +19,23 @@ add_action('wp_enqueue_scripts', 'theme_files');
 
 // Theme Features
 function theme_features() {
+  register_nav_menu('headerMenu', 'Header Menu');
+  register_nav_menu('footerMenu', 'Footer Menu');
   add_theme_support('title-tag');
   add_theme_support('post-thumbnails');
 }
 add_action('after_setup_theme', 'theme_features');
+
+function wpdocs_channel_nav_class( $classes, $item, $args ) {
+ 
+  if ( 'headerMenu' === $args->theme_location ) {
+      $classes[] = "nav-item";
+  }
+
+  return $classes;
+}
+add_filter( 'nav_menu_css_class' , 'wpdocs_channel_nav_class' , 10, 4 );
+
 
 
 // Products Custom Post type

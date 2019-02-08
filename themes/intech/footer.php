@@ -12,7 +12,15 @@
             <nav
               class="navbar navbar-expand-lg navbar-light justify-content-lg-start justify-content-md-center justify-content-center"
             >
-              <ul
+
+            <?php 
+            wp_nav_menu(array(
+              'theme_location' => 'footerMenu',
+              'menu_class' => 'navbar-nav',
+              'container' => ''
+            ));
+          ?>
+            <!-- <ul
                 class="navbar-nav flex-lg-row flex-md-row flex-sm-row flex-column align-items-sm-center align-items-center"
               >
                 <li class="nav-item">
@@ -27,7 +35,7 @@
                 <li class="nav-item separator">
                   <a class="nav-link " href="#">Contact</a>
                 </li>
-              </ul>
+              </ul> -->
             </nav>
           </div>
           <div

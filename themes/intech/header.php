@@ -27,11 +27,15 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div
-            class="collapse navbar-collapse justify-content-lg-end justify-content-md-center justify-content-sm-center justify-content-center"
-            id="navbarMobile"
-          >
-            <ul class="navbar-nav">
+          <?php 
+            wp_nav_menu(array(
+              'theme_location' => 'headerMenu',
+              'menu_class' => 'navbar-nav',
+              'container_class' => 'collapse navbar-collapse justify-content-lg-end justify-content-md-center justify-content-sm-center justify-content-center',
+              'container_id' => 'navbarMobile'
+            ));
+          ?>
+            <!-- <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link hvr-icon-down" href="tel:18005082265"
                   ><i class="fas fa-mobile-alt hvr-icon"></i> (800)­ 508-2265</a
@@ -49,8 +53,7 @@
               <li class="nav-item separator">
                 <a class="nav-link" href="/" target="_blank">Contact Us</a>
               </li>
-            </ul>
-          </div>
+            </ul> -->
         </nav>
       </div>
       <div class="container inner-header">
@@ -61,12 +64,24 @@
             class="col-lg-6 col-md-12 text-lg-left text-md-center text-sm-center text-center"
           >
             <h1 class="text-uppercase">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              <?php 
+                if(get_field('header_title')) {
+                  the_field('header_title');
+                } else { ?>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <?php }
+              ?>
             </h1>
             <p class="header-inner-text mb-0">
-              Etiam ac sodales orci, id tristique magna. Etiam sit amet lacus eu
-              diam faucibus mattis. Nam convallis lobortis sapien, et consequat
-              volutpat in.
+              <?php 
+                if(get_field('header_text')) {
+                  the_field('header_text');
+                } else { ?>
+                  Etiam ac sodales orci, id tristique magna. Etiam sit amet lacus eu
+                  diam faucibus mattis. Nam convallis lobortis sapien, et consequat
+                  volutpat in.
+                <?php }
+              ?>
             </p>
             <button
               type="button"

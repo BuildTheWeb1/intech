@@ -1,3 +1,11 @@
+(function() {
+  // Add Bootstrap classes to dinamic menu
+  let liA = document.querySelectorAll('li a');
+  for (let i = 0; i < liA.length; i++) {
+    liA[i].classList.add('nav-link');
+  }
+})();
+
 const dropdown = document.getElementById('category-dropdown');
 const dropdownCard = document.querySelector('.card-dropdown');
 
