@@ -59,7 +59,7 @@ body {
 
 .main-top {
   color: #fff;
-  background-image: url(/wp-content/uploads/2019/01/header.jpg);
+  background-image: url(src/images/header.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -106,7 +106,7 @@ body {
 }
 
 .inner-header .card-header a.dropdown:before {
-  content: url(/wp-content/uploads/2019/01/dropdown-shape.png);
+  content: url(src/images/dropdown-shape.png);
   display: block;
   width: 17px;
   height: 13px;
