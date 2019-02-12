@@ -1,5 +1,5 @@
 # intech
-1. Fisierele din repo alcatuiesc folderul wp-content (exceptie fisierul local_2019-02-04.sql).
+1. Fisierele din repo alcatuiesc folderul wp-content (exceptie fisierul local_2019-02-08.sql).
 2. Database se numeste local_2019-02-08.sql
 3. Username & password:
   - Daniel Ighisan -> username: daniel, password: daniel
