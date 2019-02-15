@@ -17,7 +17,7 @@
             ><img src="<?php echo wp_get_attachment_url(34); ?>" class="img-fluid" alt="Logo"
           /></a>
           <button
-            class="navbar-toggler"
+            class="navbar-dark navbar-toggler"
             type="button"
             data-toggle="collapse"
             data-target="#navbarMobile"

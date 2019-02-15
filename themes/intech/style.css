@@ -73,7 +73,7 @@ body {
 .inner-header h1,
 .inner-header h2 {
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 600;
   margin-bottom: 60px;
 }
@@ -85,7 +85,7 @@ body {
 .inner-header .card-header {
   font-size: 15px;
   background-color: var(--main-color-dark);
-  padding: 15px 25px 15px 30px;
+  padding: 12px 25px 12px 30px;
   position: relative;
 }
 
@@ -145,7 +145,7 @@ body {
   min-height: 200px;
   padding-left: 15px;
   position: absolute;
-  top: 52px;
+  top: 47px;
   left: 0;
   right: 0;
   z-index: 99;
@@ -223,8 +223,8 @@ button:focus,
   border-radius: 0 !important;
   border: 1px solid var(--main-color-light) !important;
   background-color: var(--main-color-light) !important;
-  padding: 15px 50px !important;
-  margin-top: 50px;
+  padding: 10px 49px !important;
+  margin-top: 45px;
 }
 
 .btn-link:hover {
@@ -405,6 +405,19 @@ button:focus,
 }
 
 @media (max-width: 992px) {
+  #navbar .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  .slideshow-container .slides > a:not(:first-child) {
+    display: none;
+  }
+  .slideshow-container .slides a:first-child {
+    width: 100%;
+  }
+  .slideshow-container .slides a:first-child img {
+    width: 100%;
+    max-width: 100%;
+  }
   #footer ul {
     align-items: center;
   }
@@ -429,6 +442,9 @@ button:focus,
     position: absolute;
     top: 13px;
   }
+  .slideshow-container .slides {
+    max-height: 164px;
+  }
   #footer li.separator:after {
     content: '';
     display: block;
@@ -440,7 +456,7 @@ button:focus,
   }
 
   p.header-inner-text {
-    padding-right: 10%;
+    padding-right: 22%;
   }
 
   .products-column {
