@@ -363,6 +363,10 @@ button:focus,
   animation-timing-function: ease-out;
 }
 
+.wp-block-image img {
+  width: 100%;
+}
+
 /* Footer */
 #footer {
   background-color: #f0f0f0;
